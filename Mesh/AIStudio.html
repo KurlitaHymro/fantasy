@@ -1,0 +1,1835 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>AI Studio FK 物品MOD制作教程</title><link href='file://night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+/* Flowchart variables */
+/* Sequence Diagram variables */
+/* Gantt chart variables */
+/* state colors */
+.label {
+  
+  color: #333; }
+
+.label text {
+  fill: #333; }
+
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1px; }
+
+.node .label {
+  text-align: center; }
+
+.node.clickable {
+  cursor: pointer; }
+
+.arrowheadPath {
+  fill: lightgrey; }
+
+.edgePath .path {
+  stroke: lightgrey;
+  stroke-width: 1.5px; }
+
+.edgeLabel {
+  background-color: #e8e8e8;
+  text-align: center; }
+
+.cluster rect {
+  fill: #6D6D65;
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1px; }
+
+.cluster text {
+  fill: #F9FFFE; }
+
+div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  
+  font-size: 12px;
+  background: #6D6D65;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+.actor {
+  stroke: #81B1DB;
+  fill: #BDD5EA; }
+
+text.actor {
+  fill: black;
+  stroke: none; }
+
+.actor-line {
+  stroke: lightgrey; }
+
+.messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: lightgrey; }
+
+.messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: lightgrey; }
+
+#arrowhead {
+  fill: lightgrey; }
+
+.sequenceNumber {
+  fill: white; }
+
+#sequencenumber {
+  fill: lightgrey; }
+
+#crosshead path {
+  fill: lightgrey !important;
+  stroke: lightgrey !important; }
+
+.messageText {
+  fill: lightgrey;
+  stroke: none; }
+
+.labelBox {
+  stroke: #81B1DB;
+  fill: #BDD5EA; }
+
+.labelText {
+  fill: #323D47;
+  stroke: none; }
+
+.loopText {
+  fill: lightgrey;
+  stroke: none; }
+
+.loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #81B1DB; }
+
+.note {
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: #fff5ad; }
+
+.noteText {
+  fill: black;
+  stroke: none;
+  
+  font-size: 14px; }
+
+.activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+/** Section styling */
+.section {
+  stroke: none;
+  opacity: 0.2; }
+
+.section0 {
+  fill: rgba(255, 255, 255, 0.3); }
+
+.section2 {
+  fill: #EAE8B9; }
+
+.section1,
+.section3 {
+  fill: white;
+  opacity: 0.2; }
+
+.sectionTitle0 {
+  fill: #F9FFFE; }
+
+.sectionTitle1 {
+  fill: #F9FFFE; }
+
+.sectionTitle2 {
+  fill: #F9FFFE; }
+
+.sectionTitle3 {
+  fill: #F9FFFE; }
+
+.sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px;
+   }
+
+/* Grid and axis */
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+
+.grid path {
+  stroke-width: 0; }
+
+/* Today line */
+.today {
+  fill: none;
+  stroke: #DB5757;
+  stroke-width: 2px; }
+
+/* Task styling */
+/* Default task */
+.task {
+  stroke-width: 2; }
+
+.taskText {
+  text-anchor: middle;
+   }
+
+.taskText:not([font-size]) {
+  font-size: 11px; }
+
+.taskTextOutsideRight {
+  fill: #323D47;
+  text-anchor: start;
+  font-size: 11px;
+   }
+
+.taskTextOutsideLeft {
+  fill: #323D47;
+  text-anchor: end;
+  font-size: 11px; }
+
+/* Special case clickable */
+.task.clickable {
+  cursor: pointer; }
+
+.taskText.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskTextOutsideLeft.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskTextOutsideRight.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+/* Specific task settings for the sections*/
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+  fill: #323D47; }
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: #BDD5EA;
+  stroke: rgba(255, 255, 255, 0.5); }
+
+.taskTextOutside0,
+.taskTextOutside2 {
+  fill: lightgrey; }
+
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: lightgrey; }
+
+/* Active task */
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: #81B1DB;
+  stroke: rgba(255, 255, 255, 0.5); }
+
+.activeText0,
+.activeText1,
+.activeText2,
+.activeText3 {
+  fill: #323D47 !important; }
+
+/* Completed task */
+.done0,
+.done1,
+.done2,
+.done3 {
+  stroke: grey;
+  fill: lightgrey;
+  stroke-width: 2; }
+
+.doneText0,
+.doneText1,
+.doneText2,
+.doneText3 {
+  fill: #323D47 !important; }
+
+/* Tasks on the critical line */
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  stroke: #E83737;
+  fill: #E83737;
+  stroke-width: 2; }
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  stroke: #E83737;
+  fill: #81B1DB;
+  stroke-width: 2; }
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  stroke: #E83737;
+  fill: lightgrey;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+.milestone {
+  transform: rotate(45deg) scale(0.8, 0.8); }
+
+.milestoneText {
+  font-style: italic; }
+
+.doneCritText0,
+.doneCritText1,
+.doneCritText2,
+.doneCritText3 {
+  fill: #323D47 !important; }
+
+.activeCritText0,
+.activeCritText1,
+.activeCritText2,
+.activeCritText3 {
+  fill: #323D47 !important; }
+
+.titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: #323D47;
+   }
+
+g.classGroup text {
+  fill: #9370DB;
+  stroke: none;
+  
+  font-size: 10px; }
+  g.classGroup text .title {
+    font-weight: bolder; }
+
+g.classGroup rect {
+  fill: #BDD5EA;
+  stroke: #9370DB; }
+
+g.classGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #BDD5EA;
+  opacity: 0.5; }
+
+.classLabel .label {
+  fill: #9370DB;
+  font-size: 10px; }
+
+.relation {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+#compositionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#compositionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#aggregationStart {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#aggregationEnd {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#dependencyStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#dependencyEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#extensionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#extensionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.commit-id,
+.commit-msg,
+.branch-label {
+  fill: lightgrey;
+  color: lightgrey;
+   }
+
+.pieTitleText {
+  text-anchor: middle;
+  font-size: 25px;
+  fill: #323D47;
+   }
+
+.slice {
+   }
+
+g.stateGroup text {
+  fill: #eee;
+  stroke: none;
+  font-size: 10px;
+   }
+
+g.stateGroup circle {
+  fill: white !important;
+  stroke: white !important;
+}
+
+g.stateGroup .state-title {
+  font-weight: bolder;
+  fill: black; }
+
+g.stateGroup rect {
+  fill: #ececff;
+  stroke: #9370DB; }
+
+g.stateGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.transition {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+.stateGroup .composit {
+  fill: #555;
+  border-bottom: 1px; }
+
+.state-note {
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: #fff5ad; }
+  .state-note text {
+    fill: black;
+    stroke: none;
+    font-size: 10px; }
+
+.stateLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #BDD5EA;
+  opacity: 0.5; }
+
+.stateLabel text {
+  fill: black;
+  font-size: 10px;
+  font-weight: bold;
+   }
+
+;
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+;
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+li > blockquote {
+	margin-bottom: 0;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 1;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="ai-studio-fk-物品mod制作教程" class="md-header-anchor"></a><span>AI Studio FK 物品MOD制作教程</span></h1><p><span>作者: Eirrac</span></p><p><span>论坛: zodgame.xyz</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n642"><a class="md-toc-inner" href="#ai-studio-fk-物品mod制作教程">AI Studio FK 物品MOD制作教程</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n647"><a class="md-toc-inner" href="#0-序言">0 序言</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n652"><a class="md-toc-inner" href="#01-教程包含的内容">0.1 教程包含的内容</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n664"><a class="md-toc-inner" href="#02-教程的背景">0.2 教程的背景</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n688"><a class="md-toc-inner" href="#03-为什么要写这个教程">0.3 为什么要写这个教程</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n696"><a class="md-toc-inner" href="#1-准备工作">1 准备工作</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n697"><a class="md-toc-inner" href="#11-相关概念">1.1 相关概念</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n698"><a class="md-toc-inner" href="#111-一路神社">1.1.1 一路神社</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n715"><a class="md-toc-inner" href="#112-脚本插件补丁mod">1.1.2 脚本,插件,补丁,MOD</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n719"><a class="md-toc-inner" href="#113-骨骼">1.1.3 骨骼</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n724"><a class="md-toc-inner" href="#114-fkik">1.1.4 FK,IK</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n733"><a class="md-toc-inner" href="#12-工具准备">1.2 工具准备</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n734"><a class="md-toc-inner" href="#121-blender-282">1.2.1 Blender 2.82</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n739"><a class="md-toc-inner" href="#122-ai-syoujyo">1.2.2 AI-Syoujyo</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n762"><a class="md-toc-inner" href="#123-sb3utility-202">1.2.3 SB3Utility 20.2</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n765"><a class="md-toc-inner" href="#13-任务明确">1.3 任务明确</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n771"><a class="md-toc-inner" href="#2-用-blender-编辑3d模型">2 用 Blender 编辑3D模型</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n775"><a class="md-toc-inner" href="#21-模型下载">2.1 模型下载</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n784"><a class="md-toc-inner" href="#22-blender配置和界面说明">2.2 Blender配置和界面说明</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n785"><a class="md-toc-inner" href="#221-中文界面">2.2.1 中文界面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n789"><a class="md-toc-inner" href="#222-rigging-rigify-插件">2.2.2 Rigging: Rigify 插件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n793"><a class="md-toc-inner" href="#223-interface-modifier-tools-插件">2.2.3 Interface: Modifier Tools 插件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n796"><a class="md-toc-inner" href="#224-其他设置">2.2.4 其他设置</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n798"><a class="md-toc-inner" href="#225-blender界面说明">2.2.5 Blender界面说明</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n841"><a class="md-toc-inner" href="#226-最最常用的快捷键和操作说明">2.2.6 最最常用的快捷键和操作说明</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n901"><a class="md-toc-inner" href="#23-绑骨前的处理">2.3 绑骨前的处理</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n903"><a class="md-toc-inner" href="#231-去掉多余的物体">2.3.1 去掉多余的物体</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n907"><a class="md-toc-inner" href="#232-对称">2.3.2 对称</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n960"><a class="md-toc-inner" href="#233-合并骨块">2.3.3 合并骨块</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n979"><a class="md-toc-inner" href="#234-应用所有修改器">2.3.4 应用所有修改器</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n985"><a class="md-toc-inner" href="#24-建立骨骼">2.4 建立骨骼</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n988"><a class="md-toc-inner" href="#241-新建骨骼">2.4.1 新建骨骼</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n994"><a class="md-toc-inner" href="#242-编辑骨骼">2.4.2 编辑骨骼</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1004"><a class="md-toc-inner" href="#25-绑骨和刷权重">2.5 绑骨和刷权重</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1005"><a class="md-toc-inner" href="#251-脊椎的绑定和自动权重">2.5.1 脊椎的绑定和自动权重</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1010"><a class="md-toc-inner" href="#252-其他部位的绑定和手动权重">2.5.2 其他部位的绑定和手动权重</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1034"><a class="md-toc-inner" href="#253-检查效果">2.5.3 检查效果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1042"><a class="md-toc-inner" href="#3-用-sb3utility-制作-mod-的3d资源部分">3 用 SB3Utility 制作 MOD 的3d资源部分</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1044"><a class="md-toc-inner" href="#31-模型导出前的处理">3.1 模型导出前的处理</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1047"><a class="md-toc-inner" href="#311-四边面-三角面">3.1.1 四边面-&gt;三角面</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1053"><a class="md-toc-inner" href="#312-重算法线">3.1.2 重算法线</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1069"><a class="md-toc-inner" href="#313-精简模型">3.1.3 精简模型</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1081"><a class="md-toc-inner" href="#314-尺寸修改">3.1.4 尺寸修改</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n1096"><a class="md-toc-inner" href="#315-建立uv展开">3.1.5 建立UV展开</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1116"><a class="md-toc-inner" href="#32-导出fbx模型">3.2 导出.fbx模型</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1125"><a class="md-toc-inner" href="#33-将fbx导入sb3utility">3.3 将.fbx导入SB3Utility</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1130"><a class="md-toc-inner" href="#34-新建一个空的unity3d文件">3.4 新建一个空的<code>.unity3d</code>文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1141"><a class="md-toc-inner" href="#35-从游戏本体中复制一些资源">3.5 从游戏本体中复制一些资源</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1161"><a class="md-toc-inner" href="#36-面板介绍">3.6 面板介绍</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1164"><a class="md-toc-inner" href="#37-模型编辑">3.7 模型编辑</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1210"><a class="md-toc-inner" href="#4-list文件的编辑">4 list文件的编辑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1224"><a class="md-toc-inner" href="#41-itemgroupeirraccsv">4.1 ItemGroup_Eirrac.csv</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1227"><a class="md-toc-inner" href="#42-itemcategory011218csv">4.2 ItemCategory_01_1218.csv</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1230"><a class="md-toc-inner" href="#43-itemlist01121801csv">4.3 ItemList_01_1218_01.csv</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n1236"><a class="md-toc-inner" href="#44-itembonelist121801csv">4.4 ItemBoneList_1218_01.csv</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1239"><a class="md-toc-inner" href="#5-mod压缩打包">5 MOD压缩打包</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1254"><a class="md-toc-inner" href="#6-测试">6 测试</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1258"><a class="md-toc-inner" href="#7-一些好用的资源网站">7 一些好用的资源网站</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n1278"><a class="md-toc-inner" href="#inf-后序">inf 后序</a></span></p></div><h2><a name="0-序言" class="md-header-anchor"></a><span>0 序言</span></h2><p><span>(这是一些无关紧要的废话,仅仅用来介绍这个教程的背景和我写它的初衷)</span></p><p><span>(这篇文章通篇使用英文标点)</span></p><p><span>(本人废话可能比较多,是为了尽量减少小白的理解难度,如有不适,请关闭本教程)</span></p><p><span>在阅读和实践中,如果你遇到了什么问题,或者发现我发布的内容有什么错误,都欢迎来论坛找我.我比较活跃,每天都会看消息,或者发邮件</span><a href='mailto:eirracrain@outlook.com' target='_blank' class='url'>eirracrain@outlook.com</a><span>,我们一起进步.</span></p><h3><a name="01-教程包含的内容" class="md-header-anchor"></a><span>0.1 教程包含的内容</span></h3><ul><li><span>介绍一些自己知道的而小白不知道的相关工具和基本概念</span></li><li><span>明确的工具版本说明(防止你用了和我不一样的工具,出现摸不着头脑的情况)</span></li><li><span>blender绑骨,刷权重(废了我一周的时间,现在可以一小时搞定)</span></li><li><span>一路神社游戏MOD制作的神器:SB3Utility的界面与功能介绍(主要介绍用到的一些功能)</span></li><li><span>一些自己走过的弯路(吐血推荐的入坑和避坑指南!!!)</span></li></ul><h3><a name="02-教程的背景" class="md-header-anchor"></a><span>0.2 教程的背景</span></h3><p><span>前段时间,我在逛论坛(zodgame.xyz)的时候看到有人(忘了是谁)在论坛发布了&lt;引狼入室&gt;的漫画化,用的是一路神社的游戏.回想自己玩过的那么多H手游(雾),我忽然意识到一个很有前景的创作路子:网络小说不那么智商低下爽文路数和色情环节;视觉小说引擎Ren&#39;Py提供的便捷的游戏创作功能;一路神社强大捏人功能;丰富的H场景和动作,多如牛毛的各种插件,补丁,MOD......如果把这些都结合起来,那么做一个非常好康的H视觉小说不在话下.</span></p><p><span>梦想是丰满的,然而现实却很骨感.为了达到这个目标,我要学的东西其实还不少:</span></p><ul><li><p><strong><span>Ren&#39;Py 引擎</span></strong><span> (本文不开设它的使用教程)</span></p><p><span>基于 Python 的开源视觉小说创作引擎,现在 Patroen 上许多 Hgame 几乎都是用它开发的.(玩了十几个游戏,发现他们UI界面很类似,一看about和lisence,才知道有这么个开发引擎)这个引擎非常nb,支持跨平台开发,同一份代码可以选择不同的发布平台,运行在android,ios,windows等等系统上.</span></p><ul><li><p><span>什么是UI界面?</span></p><p><span>User Interface, 用户界面;不同于控制台那种只能写shell的界面.</span></p></li><li><p><span>什么是控制台?</span></p><p><span>你按下 </span><code>Win</code><span>+</span><code>R</code><span>,然后输入</span><code>cmd</code><span>回车运行,冒出来的那个窗口就是.</span></p></li><li><p><span>什么是about和lisence?</span></p><p><span>about就是一个软件告诉你一些版本信息,开发人员,软件主页等等信息的地方,lisence我的理解就是开发使用许可吧?告知你使用它的权限,比如你是否可以商用,是否可以更改软件的源代码并发布(不确定)</span></p></li></ul></li><li><p><strong><span>一路神社游戏MOD的制作</span></strong></p><p><span>小说里的一些人物,场景需要用的衣服物品什么的,无法被现成的MOD和游戏本体满足.所以要自己会制作MOD.</span></p><p><span>据说论坛被黑过,许多数据都丢失了.也许就是这个原因吧,关于mod制作的教程不多.我翻了一圈,找到的能看懂的教程屈指可数.我发现论坛里好多教程没有交代清楚工具的版本,对于一些关键步骤的说明也不够清楚,对小白不是很友好......</span></p><p><span>因为我用的是 Surface Pro 5, AI少女肯定是带不动了(当时是这么想的),所以就考虑用HoneySelect.没错,我的苏菲跑得了HS!!!(画面调成&quot;性能&quot;,分辨率调低一点).然而后来经过学习,发现HS studio不支持现在的zipmod形式,因而制作一个物品的时候需要写一个manifest......小白是不是听不懂了,没事,这不是本篇教学的内容.(HS 的教程我可能会另外写一篇,在论坛翻我的帖子吧,也可能鸽掉)</span></p><p><span>总之,经过一番波折,我最终发现自己的电脑虽然跑不了AI少女的游戏本体,但是能在不要求画质的设置下畅快地运行Studio(其实还是有一点卡顿的,无伤大雅),就弃坑HS,转战AI了(因为AI支持zipmod形式的mod).</span></p></li></ul><p><span>其实对 Ren&#39;Py 的学习蛮快的,一上午基本就明白了大概.然而我在制作mod上面花了两周的时间才摸清基本路数.过程其实很简单,但是坑比较多,走了很多弯路.</span></p><h3><a name="03-为什么要写这个教程" class="md-header-anchor"></a><span>0.3 为什么要写这个教程</span></h3><ul><li><span>为了让更多人学会制作mod</span><del><span>省的我自己做</span></del></li><li><span>现有的教程鱼龙混杂,尤其是论坛上有的教程过于陈旧,图片都加载不出来,让小白们(就是我)不知所云</span></li><li><span>为了你在学习制作mod的时候少走弯路,不要对这件事心生厌恶或恐惧</span></li></ul><h2><a name="1-准备工作" class="md-header-anchor"></a><span>1 准备工作</span></h2><h3><a name="11-相关概念" class="md-header-anchor"></a><span>1.1 相关概念</span></h3><h4><a name="111-一路神社" class="md-header-anchor"></a><span>1.1.1 一路神社</span></h4><ul><li><p><span>H-Game</span></p><blockquote><p><span>“H-Game” 中的“H”的代表性爱，其语源虽然有数种说法，但一般认为以取自&quot;へんたい（hentai；汉字：“变态”）&quot;此字罗马拼音的第一个字母最为可信。此隐语因为和色情事物有关，经广泛使用后逐渐引申出“性爱”之意，因而此类有性爱情节的游戏被称为“H-Game”。</span></p></blockquote><p><span>----转自百度.</span></p><p><span>就是我们所说的小黄油(游)</span></p></li><li><p><span>社保</span></p><p><del><span>就是&quot;射爆&quot;</span></del></p></li><li><p><span>illusion社</span></p><p><span>日本H-Game的顶梁柱,玩H-Game你不知道这个神社那就可惜了.该公司发布了众多&quot;家喻户晓&quot;的黄油,质量有很高的保障.&quot;尾行&quot;,&quot;电车之狼&quot;,&quot;同校生&quot;,&quot;欲望之血&quot;都是她的作品.</span></p><blockquote><p><span>依照Illusion的规定，它生产的游戏不允许在日本以外的国家或地区销售或使用，官方版本仅支持日语操作系统，并且仅限于在日本使用。</span></p></blockquote><p><span>----转自百度</span></p></li></ul><h4><a name="112-脚本插件补丁mod" class="md-header-anchor"></a><span>1.1.2 脚本,插件,补丁,MOD</span></h4><p><span>这些概念的辨析已经有人写的非常好了,我就不重复发明轮子了(我也是从这里搞懂的)</span></p><p><span>传送门:</span><a href='https://d20sxl95pp686h.cloudfront.net/ai-syoujyo-intro.html'><span>游戏结构及插件体系介绍</span></a><strong><span>(以后简称&quot;体系介绍&quot;)</span></strong></p><p><span>在网页有个便捷的搜索功能,任何一个浏览器都有.当你打开某个网页,按下</span><code>Ctrl</code><span>+</span><code>F</code><span>即可开启页面文本搜索,找到你想看的内容.</span></p><h4><a name="113-骨骼" class="md-header-anchor"></a><span>1.1.3 骨骼</span></h4><p><span>事先说一下,本文中的骨骼指的是骨骼动画里的骨骼.简单来说就是给你一个3d模型,它是由面组成的,为了方便它摆姿势,我们不可能对模型的每个顶点一一移动位置.我们知道,生物的动作其实是肌肉拉动骨骼进行旋转完成的.在动画制作中,动画骨骼也是类似于生物骨骼的东西,可以理解为由数量较少的线段构成;我们将模型的顶点按照不同的权重与动画骨骼绑定,当我们旋转移动骨骼时,与之绑定的顶点也会发生相应的位置变换,从而形成模型的姿势改变.</span></p><p><img src="pics\u=857030474,2696553357&amp;fm=26&amp;gp=0.jpg" referrerpolicy="no-referrer" alt="img"></p><p><span>在教程中,使用的模型是从网上下载的人体骨架的3d模型,为了防止混淆,在本文中称为&quot;骷髅&quot;;</span></p><p><span>而&quot;骨骼&quot;则特指骨骼动画的骨骼.</span></p><h4><a name="114-fkik" class="md-header-anchor"></a><span>1.1.4 FK,IK</span></h4><blockquote><p><span>FK正向动力学，请参考芭比娃娃的运动方式</span></p><p><span>IK反向动力学，请参考提线木偶的运动方式</span></p><p><span>芭比娃娃是靠活动各个关节来带动下个关节的运动，比如说你旋转肩膀，会带动胳膊运动</span></p><p><span>提线木偶是靠小关节的运动，而使得上面关节跟着运动，比如说你拉一下提线木偶的手部关节，会带动胳膊和肩膀一起运动</span></p><p><span>没有“什么时候用IK什么时候用FK”这么一说，因为人的运动一直都是FK和IK一起的作用。只要适合的场合用适合的动作就OK。</span></p></blockquote><p><span>引自:</span><a href='https://zhidao.baidu.com/question/110064337.html' target='_blank' class='url'>https://zhidao.baidu.com/question/110064337.html</a></p><p><span>studio的男角色和女角色支持FK和IK,而物品的话,目前我只找到FK的解决方案,貌似并不支持IK.</span></p><h3><a name="12-工具准备" class="md-header-anchor"></a><span>1.2 工具准备</span></h3><h4><a name="121-blender-282" class="md-header-anchor"></a><span>1.2.1 Blender 2.82</span></h4><p><span>类似Maya,3D Max的三维建模软件,不同的是,Blender是开源的.这意味着它是免费的,不需要破解;且因为开源,所以网上有很多人开发的插件,使你的建模更为迅捷!</span></p><p><span>官网:</span><a href='https://www.blender.org/' target='_blank' class='url'>https://www.blender.org/</a></p><p><span>点击&quot;Download Blender 2.82&quot;下载安装即可</span></p><p><img src="pics\image-20200222091712767.png" referrerpolicy="no-referrer" alt="image-20200222091712767"></p><h4><a name="122-ai-syoujyo" class="md-header-anchor"></a><span>1.2.2 AI-Syoujyo</span></h4><p><span>我也不知道我的版本是多少,但是在我的目录</span><code>*\AI-Syoujyo\abdata</code><span>下,补丁已经打到了</span><code>add14</code><span>和</span><code>studio14</code><span>.</span></p><p><span>其实游戏的版本无关紧要,你只要有studio就可以,即</span><code>*\AI-Syoujyo\StudioNEOV2.exe</code></p><p><span>(不过你要是没有studio,也就不会需要做Studio的mod了吧)</span></p><p><span>下面的插件都是需要安装的,可以在&quot;体系介绍&quot;里找到说明和安装链接.</span></p><ul><li><p><strong><span>BepInEx v5.0.1</span></strong></p><p><span>这是一个用于支持其他插件的插件.关于它的介绍,在&quot;体系介绍&quot;已经很详细了,安装链接也可以在那里找到.</span></p></li><li><p><strong><span>BepisPlugins r13.1</span></strong></p><p><span>一个基于BepInEx的插件集合,我们主要是需要里面的Sideloader,Sideloader提供Zipmod加载功能,我们要做的mod就是zipmod.</span></p></li><li><p><strong><span>ResourceRedirector</span></strong></p><p><span>它是Sideloader插件加载zipmod的依赖,是</span><a href='https://github.com/bbepis/XUnity.AutoTranslator'><strong><span>XUnity.AutoTranslator</span></strong></a><span>的一部分</span></p><p><img src="pics\image-20200222094424959.png" referrerpolicy="no-referrer" alt="image-20200222094424959"></p></li><li><p><strong><span>ZOD官方汉化 1.2.0</span></strong></p><p><span>(可选)最好有一个吧,和我教程里的保持一致.当然没有的话估计也不会有什么影响.</span></p><p><span>汉化插件链接:</span><a href='https://zodgame.xyz/forum.php?mod=viewthread&amp;tid=205429' target='_blank' class='url'>https://zodgame.xyz/forum.php?mod=viewthread&tid=205429</a></p></li><li><p><span>(可选,教程里用不上)</span><strong><span>AI_MaterialEditor</span></strong></p><p><span>材质编辑器，动态修改衣服、头发等的材质.在&quot;体系介绍&quot;里面</span><code>Ctrl</code><span>+</span><code>F</code><span>找一下吧.</span></p></li></ul><h4><a name="123-sb3utility-202" class="md-header-anchor"></a><span>1.2.3 SB3Utility 20.2</span></h4><p><span>这里给出我自己在论坛搬运的下载链接:</span></p><p><span>mod制作工具SB3Utility最新版分流v20.2 和依赖库，解决运行不正常的问题</span>
+<a href='https://zodgame.xyz/forum.php?mod=viewthread&amp;tid=210381' target='_blank' class='url'>https://zodgame.xyz/forum.php?mod=viewthread&tid=210381</a>
+<span>(出处: ZodGame论坛)</span></p><h3><a name="13-任务明确" class="md-header-anchor"></a><span>1.3 任务明确</span></h3><p><span>再次提醒,本教程的内容是:用 Blender 对网络上下载的 .blend 模型进行绑骨,刷权重,然后将模型导出,并用SB3Utility导入AI少女Studio,作为 FK 物品.最终我们将获得一个可以摆姿势的骷髅.(附带变色和发光功能)</span></p><p><span>如果你想做的东西不是这个,本教程可以作为参考,遇到问题欢迎来找我交流.</span></p><p><span>一个zipmod形式的AI studio FK 物品由以下部分组成:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="powershell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="powershell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">abdata</span> <span class="cm-comment"># 文件夹</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">studio</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">GroupName</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">mod_name</span><span class="cm-punctuation">.</span><span class="cm-identifier">unity3d</span> <span class="cm-comment"># 3d资源文件</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">info</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">GroupName</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-identifier">ItemBoneList_Group_Category</span><span class="cm-punctuation">.</span><span class="cm-identifier">csv</span> <span class="cm-comment"># 物品的骨骼列表</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-identifier">ItemCategory_Category_Group</span><span class="cm-punctuation">.</span><span class="cm-identifier">csv</span> <span class="cm-comment"># 物品的子类别</span></span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-identifier">ItemGroup_GroupName</span><span class="cm-punctuation">.</span><span class="cm-identifier">csv</span> <span class="cm-comment"># 物品的组别</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-identifier">ItemList_ListID_Group_Category</span><span class="cm-punctuation">.</span><span class="cm-identifier">csv</span> <span class="cm-comment"># 物品清单</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">manifest</span><span class="cm-punctuation">.</span><span class="cm-identifier">xml</span> <span class="cm-comment"># 用于制作manifest</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 288px;"></div><div class="CodeMirror-gutters" style="display: none; height: 288px;"></div></div></div></pre><p><span>其中</span><code>.csv</code><span>是表格文件,属于mod中的&quot;list&quot;部分,用来给SideLoader插件生成一个包含表格信息的</span><code>.unity3d</code><span>文件,这个文件写好以后,在游戏里的相应列表里看到相应的选项;</span><code>.unity3d</code><span>文件是资源文件,存放我们的模型;</span><code>manifest.xml</code><span>用来给SideLoader插件生成manifest文件,manifest文件是list和资源文件的总索引,貌似还有加密的功能,这个文件不是很懂,照着格式填就行了.</span></p><h2><a name="2-用-blender-编辑3d模型" class="md-header-anchor"></a><span>2 用 Blender 编辑3D模型</span></h2><p><span>这一部分完成的任务就是用 Blender 绑骨,刷权重,手把手从零开始教学.对于没有接触过Blender的读者,请耐心跟我一步一步做(当然你也可以另外找一个模型)</span></p><p><strong><span>对于会使用 Blender 或者其他3D建模软件进行绑骨和刷权重的读者,可以直接跳到第 3 节</span></strong></p><p><span>开始之前一个重要提示:对于你不确定后果的步骤,建议事先备份.不然如果做错了改不回去真的很蛋疼,毕竟撤销用到的历史操作记录是有限的.</span></p><h3><a name="21-模型下载" class="md-header-anchor"></a><span>2.1 模型下载</span></h3><p><span>传送门:</span><a href='https://www.blender-3d.cn/' target='_blank' class='url'>https://www.blender-3d.cn/</a></p><p><span>建议用qq免注册登录,这样就可以用搜索工具了.每天有一个免费下载模型的机会.</span></p><p><span>输入&quot;骷髅&quot;进行搜索:</span></p><p><img src="pics\image-20200222120629269.png" referrerpolicy="no-referrer" alt="image-20200222120629269"></p><p><span>我用的是第1行第4个&quot;lp人体骨骼&quot;.</span></p><p><span>解压得到&quot;人体骨骼.blend&quot;,我们改名为&quot;skeleton.blend&quot;,然后双击打开,可以看到:</span></p><p><img src="pics\image-20200222132615828.png" referrerpolicy="no-referrer" alt="image-20200222132615828"></p><p><span>你也可以从网上下载其他格式的模型,然后在</span><code>File</code><span>-</span><code>Import</code><span>里面导入.</span></p><h3><a name="22-blender配置和界面说明" class="md-header-anchor"></a><span>2.2 Blender配置和界面说明</span></h3><h4><a name="221-中文界面" class="md-header-anchor"></a><span>2.2.1 中文界面</span></h4><p><span>上方菜单栏</span><code>Edit</code><span>-</span><code>Preferences</code><span>,弹出窗口:</span></p><p><img src="pics\image-20200222133023688.png" referrerpolicy="no-referrer" alt="image-20200222133023688"></p><p><span>勾选</span><code>Translation</code><span>即可.</span></p><h4><a name="222-rigging-rigify-插件" class="md-header-anchor"></a><span>2.2.2 Rigging: Rigify 插件</span></h4><p><span>搜索安装如下插件:</span></p><p><img src="pics\image-20200222133158477.png" alt="image-20200222133158477" style="zoom:50%;" /></p><p><span>这个插件可以让我们方便地建立一个人体骨骼.(还有自动绑骨功能,但是因为我们的模型比较复杂,不属于皮肤和衣物,骨骼也不允许有拉伸形变,所以这个功能用不到)</span></p><h4><a name="223-interface-modifier-tools-插件" class="md-header-anchor"></a><span>2.2.3 Interface: Modifier Tools 插件</span></h4><p><span>搜索</span><code>modifier</code><span>,然后勾选.这个插件提供了一键应用所有修改器的功能,后面我们会用到.</span></p><p><img src="pics\image-20200224114605513.png" alt="image-20200224114605513" style="zoom: 40%;" /></p><h4><a name="224-其他设置" class="md-header-anchor"></a><span>2.2.4 其他设置</span></h4><p><span>其他设置按照自己喜好来.但是新手不建议随意修改其他设置,免得你找不到我教程里说到的功能.</span></p><h4><a name="225-blender界面说明" class="md-header-anchor"></a><span>2.2.5 Blender界面说明</span></h4><p><img src="pics\批注 2020-02-22 161403.png" referrerpolicy="no-referrer" alt="批注 2020-02-22 161403"></p><p><span>Blender 的主界面主要有上方菜单栏1,工作区风格2,各种类似5和6的Tab,底部12和13信息栏.(目前显示骨架模型的Tab叫做&quot;3D视图&quot;)</span></p><p><span>Tab的左上角或者左下角有一个小标记和&quot;v&quot;符号,点开可以选择这个Tab显示的内容.</span></p><ol start='' ><li><p><span>菜单栏</span></p><p><span>一些设置.</span></p></li><li><p><span>工作区风格选择</span></p><p><span>工作区风格就是你的窗口里各个tab的显示内容和大小排布方案.做动画就用&quot;Animation&quot;,写脚本就用&quot;Scripting&quot;,编辑贴图就用&quot;UV Editing&quot;,默认的是&quot;default&quot;.</span></p><p><span>你也可以点&quot;+&quot;,增加一个自己喜欢的排版.</span></p></li><li><p><span>工具</span></p><p><span>选择,移动和旋转等工具.对于有小三角的工具,长按可以选择子工具.</span></p><p><span>可以用快捷键</span><code>T</code><span>开启和关闭.</span></p></li><li><p><span>导航轮</span></p><p><span>点击小圆圈可以切换视图,拖拽导航轮的空白地区可以自由旋转视角.</span></p><p><span>右边角落有个&quot;&lt;&quot;符号,点开是工具属性快捷面板.这个面板可以用快捷键</span><code>N</code><span>开启和关闭.</span></p></li><li><p><span>&quot;大纲视图&quot;Tab</span></p></li><li><p><span>&quot;属性&quot;Tab</span></p><p><span>用来定义目前选中的Object或者场景或者工具或者其他各种乱七八糟的属性.</span></p></li><li><p><span>模式选择</span></p></li><li><p><span>也是一些设置和工具</span></p></li><li><p><span>从左到右依次是&quot;坐标轴&quot;,&quot;中心点&quot;,&quot;吸附&quot;</span></p><p><span>吸附开启以后,可以自动吸附最近点,中心点等等,可以根据需要进行设置.</span></p></li><li><p><span>显示形式</span></p><p><span>你可以用鼠标悬停在相应的标签看看名称,点击一下试试功能效果.</span></p></li><li><p><span>动画的时间轴Tab</span></p><p><span>这个教程里用不上.</span></p></li><li><p><span>鼠标操作提示</span></p><p><span>提示你在当前状态下,不同的鼠标按键的效果.你可以按住</span><code>Ctrl</code><span>或者</span><code>Shift</code><span>看看有什么变化.</span></p></li><li><p><span>一些场景的资源信息</span></p></li></ol><h4><a name="226-最最常用的快捷键和操作说明" class="md-header-anchor"></a><span>2.2.6 最最常用的快捷键和操作说明</span></h4><p><span>以下快捷键都是在&quot;3D 视图&quot;这个Tab里有作用.</span></p><figure><table><thead><tr><th><span>按键</span></th><th><span>功能</span></th></tr></thead><tbody><tr><td><code>g</code></td><td><span>移动,按下后,可以直接输入数字按回车确认,也可以移动鼠标作为输入,左键确认,右键取消</span></td></tr><tr><td><code>r</code></td><td><span>旋转,操作同上</span></td></tr><tr><td><code>s</code></td><td><span>缩放,操作同上</span></td></tr><tr><td><code>a</code></td><td><span>全选</span></td></tr><tr><td><code>Ctrl</code><span>+</span><code>z</code></td><td><span>撤销,支持撤销多步</span></td></tr><tr><td><code>Shift</code><span>+</span><code>a</code></td><td><span>添加</span></td></tr><tr><td><code>x</code></td><td><span>删除</span></td></tr><tr><td><code>Shift</code><span>+鼠标选择</span></td><td><span>多选.有的设置里是左键选择,有的是右键选择.可以去</span><code>编辑</code><span>-</span><code>偏好设置</code><span>-</span><code>键位映射</code><span>里进行设置.</span></td></tr><tr><td><code>鼠标中键</code><span>+移动鼠标</span></td><td><span>视线旋转</span></td></tr><tr><td><code>Shift</code><span>+</span><code>鼠标中键</code><span>+移动鼠标</span></td><td><span>视线平移</span></td></tr><tr><td><span>滚轮</span></td><td><span>视线方法和缩小</span></td></tr><tr><td><code>Ctrl</code><span>+</span><code>s</code></td><td><span>保存</span></td></tr><tr><td><code>Ctrl</code><span>+</span><code>a</code></td><td><span>应用变换</span></td></tr><tr><td><code>Shift</code><span>+</span><code>n</code></td><td><span>重算法线</span></td></tr><tr><td><code>Ctrl</code><span>+</span><code>p</code></td><td><span>设置父级</span></td></tr><tr><td><code>Ctrl</code><span>+</span><code>l</code></td><td><span>关联</span></td></tr><tr><td><code>Alt</code><span>+</span><code>p</code></td><td><span>取消父级</span></td></tr><tr><td><code>Alt</code><span>+</span><code>l</code></td><td><span>取消关联</span></td></tr></tbody></table></figure><h3><a name="23-绑骨前的处理" class="md-header-anchor"></a><span>2.3 绑骨前的处理</span></h3><p><strong><span>注意!!! 2.3 部分的操作比较繁琐,其实不是很重要,但是可以帮助新手快速熟悉Blender的操作.如果你觉得很无聊,可以直接使用附件里的 </span><code>skeleton_2.3.blend</code><span>,这个模型是经过2.3这些步骤以后得到的模型</span></strong></p><h4><a name="231-去掉多余的物体" class="md-header-anchor"></a><span>2.3.1 去掉多余的物体</span></h4><p><span>把模型中的灯光(小太阳是发光源,圆圈是亮度)和相机删掉.</span></p><p><span>可以在&quot;大纲视图&quot;里面选中然后鼠标停在&quot;3D视图&quot;,按下</span><code>x</code><span>,&quot;删除&quot;.</span></p><p><img src="pics\image-20200222164856759.png" referrerpolicy="no-referrer" alt="image-20200222164856759"></p><h4><a name="232-对称" class="md-header-anchor"></a><span>2.3.2 对称</span></h4><p><span>下载的这个模型其实并没有关于世界坐标系左右对称,我们需要调整一下,便于之后骨骼和模型对齐.</span></p><p><span>首先按下</span><code>N</code><span>打开属性侧边栏.(注意与&quot;属性&quot;Tab区分)</span></p><ul><li><p><span>对于本来就位于中间位置的Object,选中以后修改x坐标(我们只需要模型关于在x轴方向上对称,所以把位置x改为0即可,其他的不用管)</span></p><p><span>有:脊椎骨,尾骨,骨盆,胸腔</span></p><p><img src="pics\image-20200222165141953.png" referrerpolicy="no-referrer" alt="image-20200222165141953"></p></li><li><p><span>手和脚删去一边</span></p><p><span>如下:</span></p></li></ul><p><img src="pics\image-20200224111439871.png" referrerpolicy="no-referrer" alt="image-20200224111439871"></p><p><span>我对原有的镜像修改器不是很信任,所以打算删了原来的所有镜像修改器,然后自己新建一个.</span></p><p><span>按</span><code>a</code><span>全选所有object,然后按住</span><code>Shift</code><span>选中一个没有镜像的object(比如左手的大拇指);选好后,</span><code>Ctrl</code><span>+</span><code>L</code><span>,选择</span><code>修改器</code><span>.如下:</span></p><p><img src="pics\image-20200224111822216.png" referrerpolicy="no-referrer" alt="image-20200224111822216"></p><p><span>这样,所有object都没有镜像修改器了.结果如下:</span></p><p><img src="pics\image-20200222175319149.png" referrerpolicy="no-referrer" alt="image-20200222175319149"></p><p><span>不要问我为什么它的牙齿有的在左有的在右,我也不知道为什么原作者要这么设计......</span></p><p><span>由于牙齿,脑壳和下巴并不是严格地被对称切开,所以建议单选进行位置的微调.</span></p><p><span>移动快捷键:选中Object以后,按一下</span><code>g</code><span>,然后按一下</span><code>x</code><span>,拖动鼠标并单击确认.如果你觉得移动幅度太大,在拖动鼠标的时候可以同时按住</span><code>Shift</code><span>键减慢速度.</span></p><p><span>我发现,现在胳膊和手的位置不太好,会给之后绑骨增加麻烦,我们调整一下位置和角度:</span></p><ol start='' ><li><code>Shift</code><span>+</span><code>鼠标右键</code><span>设定3D游标的位置</span></li><li><span>将轴心点设置为</span><code>3D游标</code></li><li><span>根据需要选择和调节object的位置和角度</span></li></ol><p><img src="pics\image-20200224112720305.png" referrerpolicy="no-referrer" alt="image-20200224112720305"></p><p><span>调好位置与角度以后,</span><code>Shift</code><span>+</span><code>s</code><span>,</span><code>游标-&gt;世界中心</code><span>;轴心点调回</span><code>各自的原点</code><span>.</span></p><p><img src="pics\image-20200224113054594.png" referrerpolicy="no-referrer" alt="image-20200224113054594"></p><p><strong><span>然后请注意这一步,很重要</span></strong><span>:</span><code>a</code><span>全选,然后</span><code>Ctrl</code><span>+</span><code>a</code><span>(应用),选&quot;全部变换&quot;.这一步的作用是把当前所有坐标和旋转都设置为0,便于之后的一系列操作.这时候你再看他们的坐标和旋转,都是零.还有原来那些红点点黄点点(Object的中心)都到了世界坐标轴的原点.</span></p><p><span>下面我们要自己做镜像了.(一定要保证你应用了所有变换,因为对称的中心点必须是在零点)</span></p><p><span>可以为头盖骨建立一个镜像修改器,然后用之前说的</span><code>Ctrl</code><span>+</span><code>L</code><span>的方法,对其他骨头也应用镜像.</span></p><p><img src="pics\image-20200223195223261.png" referrerpolicy="no-referrer" alt="image-20200223195223261"></p><p><span>修改器设置(对于上门牙和下门牙,在需要把</span><code>选项</code><span>-</span><code>合并</code><span>取消勾选,防止左右牙齿长在一起):</span></p><p><img src="pics\image-20200223195446405.png" alt="image-20200223195446405" style="zoom:50%;" /></p><p><span>对于左右手臂这种的,我们希望是可以单选左边或者右边,所以删除手臂,肩膀,手,大腿,小腿,脚的镜像修改器,采用下面的方法进行镜像:</span></p><ol start='' ><li><code>Shift</code><span>连选要镜像的Object</span></li><li><span>按</span><code>Shift</code><span>+</span><code>d</code><span>创建副本(按完松开)</span></li><li><span>按</span><code>s</code><span>进入缩放(按完松开)</span></li><li><span>按</span><code>x</code><span>限制在x轴向(按完松开)</span></li><li><span>键盘输入</span><code>-1</code><span>,这个时候你会看到对称结果已经出来了</span></li><li><code>Enter</code><span>回车确认</span></li></ol><p><img src="pics\image-20200224113531235.png" referrerpolicy="no-referrer" alt="image-20200224113531235"></p><p><span>用这个方法得到的左右半边是两个不同的Object,而用镜像修改器,得到的则是一个Object(哪怕它们的顶点和面是分离的).</span></p><h4><a name="233-合并骨块" class="md-header-anchor"></a><span>2.3.3 合并骨块</span></h4><p><span>我们把一些骨头合并作为一个Object.比如整个脊椎被分成许多骨块,但我们不需要这么精细地控制每一块.</span></p><p><span>合并的方法:把要合并的Object用</span><code>Shift</code><span>连选,然后</span><code>Ctrl</code><span>+</span><code>j</code><span>,合并成一块.</span></p><p><span>需要合并的骨头(这个根据你的实际情况,我只是写我这个模型的制作):头骨左右合并,下巴左右合并,上牙齿合并,下牙齿合并,脊椎与尾骨合并成一条,小臂的两个骨头合并,手掌的小碎骨,脚掌的小碎骨,脚趾(我不用精细控制每个脚趾头,如果你需要精细控制就不要合并)</span></p><p><span>觉得选择的时候其他骨头碍事,可以在大纲视图把对应的Object的小眼睛点掉.</span></p><figure><table><thead><tr><th style='text-align:center;' ><span>手掌</span></th><th style='text-align:center;' ><span>脚掌</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="pics\image-20200223105348057.png" referrerpolicy="no-referrer" alt="image-20200223105348057"></td><td style='text-align:center;' ><img src="pics\image-20200223105533433.png" referrerpolicy="no-referrer" alt="image-20200223105533433"></td></tr></tbody></table></figure><figure><table><thead><tr><th style='text-align:center;' ><span>牙齿</span></th><th style='text-align:center;' ><span>脚趾</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="pics\image-20200223110306058.png" referrerpolicy="no-referrer" alt="image-20200223110306058"></td><td style='text-align:center;' ><img src="pics\image-20200223200342750.png" referrerpolicy="no-referrer" alt="image-20200223200342750"></td></tr></tbody></table></figure><h4><a name="234-应用所有修改器" class="md-header-anchor"></a><span>2.3.4 应用所有修改器</span></h4><p><span>注意一下现在很多Object都有一个&quot;Sub&quot;修改器,这个修改器叫&quot;表面细分&quot;,就是把表面分成2份,4份,8份......这个修改器也要应用掉.这里要用到 </span><code>Modifier Tools</code><span> 插件,前面介绍了安装方法.</span></p><p><code>a</code><span>全选所有object,然后点&quot;Apply All&quot;,所有的修改器都被应用了.</span></p><p><img src="pics\image-20200224114726493.png" referrerpolicy="no-referrer" alt="image-20200224114726493"></p><p><span>然后保险起见,全选所有Object,</span><code>Ctrl</code><span>+</span><code>a</code><span>应用所有变换.</span></p><p><strong><span>再次声明</span></strong><span> 如果觉得麻烦,你可以直接使用我到目前为止所有操作之后,处理好的模型</span><code>skeleton_2.3.blend</code></p><h3><a name="24-建立骨骼" class="md-header-anchor"></a><span>2.4 建立骨骼</span></h3><p><span>(严格来讲这一步只是把骨骼的位置摆好,绑骨和刷权重我是同步进行的)</span></p><p><span>这一部分我尽可能讲得浅显,但如果你还是不很明白,建议去b站搜索&quot;blender 绑骨&quot;,视频教程很多.</span></p><h4><a name="241-新建骨骼" class="md-header-anchor"></a><span>2.4.1 新建骨骼</span></h4><p><span>这一步需要插件</span><code>Rigging: Rigify</code><span>,前文已经介绍过安装步骤.</span></p><p><span>鼠标停在</span><code>3D 视图</code><span>这个Tab范围内,</span><code>Shift</code><span>+</span><code>a</code><span>,</span><code>骨架</code><span>-</span><code>基本</code><span>-</span><code>Human (Meta-Rig)</code><span>.你也可以试试其他的骨架是啥样子.</span></p><p><img src="pics\image-20200224115055225.png" referrerpolicy="no-referrer" alt="image-20200224115055225"></p><p><span>为了便于之后的编辑,我们设置一下骨架的显示方式:</span></p><p><img src="pics\image-20200224115746950.png" referrerpolicy="no-referrer" alt="image-20200224115746950"></p><h4><a name="242-编辑骨骼" class="md-header-anchor"></a><span>2.4.2 编辑骨骼</span></h4><p><span>确保你在</span><code>物体模式</code><span>下选中了骨架,然后点击</span><code>物体模式</code><span>那里,切换到</span><code>编辑模式</code><span>.</span></p><p><span>在右侧那个可以用</span><code>n</code><span>键开启和关闭的属性栏,选择</span><code>工具</code><span>-</span><code>选项</code><span>-</span><code>x轴镜像</code><span>.它可以让你在操作左边的同时,自动镜像右边.</span></p><p><img src="pics\image-20200224115851036.png" referrerpolicy="no-referrer" alt="image-20200224115851036"></p><p><span>然后选择每块骨骼的顶点,移动位置和模型的相应地方对应.复习一下移动的快捷键:</span><code>g</code><span>之后按</span><code>x</code><span>锁定在x轴,如果再按</span><code>y</code><span>,则切换锁定在y轴.正视图,侧视图这些能让你看到背景的方形网格的视图,可以保证你的移动只在这个平面上有效.</span></p><p><span>总之,请把除了脸部以外的所有骨骼都摆好位置.每个骨骼都是有名字的,你可以查看左上角的名称显示.因为我的模型用不到胸部晃动(雾),所以胸部的骨骼删除了.我还删除了后脚跟的骨骼.</span></p><p><img src="pics\image-20200224115955960.png" referrerpolicy="no-referrer" alt="image-20200224115955960"></p><p><span>脊椎的几块骨骼的大概位置如下:</span></p><p><img src="pics\image-20200224120247961.png" referrerpolicy="no-referrer" alt="image-20200224120247961"></p><p><span>到这一步,我也提供了一个我完成的模型,参照</span><code>skeleton_2.4.blend</code></p><h3><a name="25-绑骨和刷权重" class="md-header-anchor"></a><span>2.5 绑骨和刷权重</span></h3><h4><a name="251-脊椎的绑定和自动权重" class="md-header-anchor"></a><span>2.5.1 脊椎的绑定和自动权重</span></h4><p><code>物体模式</code><span>,选中脊柱,然后</span><code>Shift</code><span>连选骨骼,</span><code>Ctrl</code><span>+</span><code>p</code><span>,</span><code>附带自动权重</code><span>.</span></p><p><img src="pics\image-20200224120831716.png" referrerpolicy="no-referrer" alt="image-20200224120831716"></p><p><span>这时,可以单选骨骼,进入</span><code>编辑模式</code><span>,试着对骨骼进行位置和角度的玩弄,看看效果如何:</span></p><p><img src="pics\image-20200224121258064.png" referrerpolicy="no-referrer" alt="image-20200224121258064"></p><h4><a name="252-其他部位的绑定和手动权重" class="md-header-anchor"></a><span>2.5.2 其他部位的绑定和手动权重</span></h4><p><span>在</span><code>物体模式</code><span>,</span><code>a</code><span>全选,然后</span><code>Shift</code><span>连选骨架,</span><code>Ctrl</code><span>+</span><code>p</code><span>,</span><code>附带空顶点组</code><span>.</span></p><p><span>自动权重会导致做动作的时候骨架模型发生扭曲形变,脊椎骨骼数量多,用这个更真实.但是其他骨骼都不能有扭曲,所以我们自己刷权重.</span></p><p><img src="pics\image-20200224121456101.png" referrerpolicy="no-referrer" alt="image-20200224121456101"></p><p><span>接下来我们给胸骨刷权重.</span></p><p><span>在</span><code>物体模式</code><span>下,选中骨骼,然后</span><code>Shift</code><span>连选胸骨,然后切换到</span><code>权重绘制</code><span>:</span></p><p><img src="pics\image-20200224153619685.png" referrerpolicy="no-referrer" alt="image-20200224153619685"></p><p><span>在</span><code>权重绘制</code><span>模式下,选择操作需要同时按住</span><code>Ctrl</code><span>.现在我们</span><code>Ctrl</code><span>选中一段骨骼,设置一下画笔(可以鼠标点在滑条上左右拖动):权重</span><code>1</code><span>,半径大一点,强度</span><code>1</code><span>,</span><code>选项</code><span>-</span><code>仅前面的面</code><span>取消勾选,</span><code>衰减</code><span>选全1.</span></p><p><span>画笔怎么设置这一块儿,其实就是看你具体的需求,如果你需要画笔的对称效果,可以试验一下</span><code>对称</code><span>-</span><code>x</code><span>和</span><code>选项</code><span>-</span><code>x向镜像</code><span>(勾选</span><code>尺寸</code><span>,</span><code>权重</code><span>和</span><code>强度</code><span>),看看这两种不同的对称设置有什么区别.</span></p><p><img src="pics\image-20200224154054828.png" referrerpolicy="no-referrer" alt="image-20200224154054828"></p><p><span>我的这个设置,可以让你点一下就把模型权重都画红.这表示,胸骨会100%随着现在高亮的这段骨骼而移动,旋转.</span></p><p><img src="pics\image-20200224154734860.png" referrerpolicy="no-referrer" alt="image-20200224154734860"></p><p><span>刷好以后,</span><code>Ctrl</code><span>选择另一端骨骼,再</span><code>Ctrl</code><span>选择下一个你要刷权重的Object(比如肩胛骨),你会发现退出</span><code>权重绘制</code><span>了,不要慌.这是因为你刚刚打开了和</span><code>胸骨</code><span>这个Object的</span><code>权重绘制</code><span>,但是肩胛骨还在</span><code>物体模式</code><span>.我们再切换模式就好了:</span></p><p><img src="pics\image-20200224155110556.png" referrerpolicy="no-referrer" alt="image-20200224155110556"></p><p><span>刷好一半以后切换骨骼:</span></p><p><img src="pics\image-20200224155342488.png" referrerpolicy="no-referrer" alt="image-20200224155342488"></p><p><span>以此类推,把全身的骨骼都刷好.在这一步你应该能理解为什么之前我没有把整个模型都</span><code>Ctrl</code><span>+</span><code>j</code><span>合成一块儿,因为那样做的话,在刷权重的时候模型的所有骨头都会进入</span><code>权重绘制</code><span>,在刷一块骨头的时候很容易沾到另一块骨头上.</span></p><p><span>如果你觉得频繁单击切换</span><code>权重绘制</code><span>很麻烦,可以像我一样进行这样的设置:</span><code>编辑</code><span>-</span><code>偏好设置</code><span>-</span><code>键位映射</code><span>-</span><code>3D View</code><span>-</span><code>Tab for Pie Menu</code><span>勾选.</span></p><p><img src="pics\image-20200224155854713.png" alt="image-20200224155854713" style="zoom:50%;" /></p><p><span>这样你就可以按下</span><code>Tab</code><span>打开模式切换盘:</span></p><p><img src="pics\image-20200224160022813.png" referrerpolicy="no-referrer" alt="image-20200224160022813"></p><p><span>由于教程选用的骨骼在手这里只有一根骨骼,所以如果你觉得麻烦,可以将右手手掌包括手指全都</span><code>Ctrl</code><span>+</span><code>j</code><span>合并为一块.</span></p><p><img src="pics\image-20200224160248083.png" referrerpolicy="no-referrer" alt="image-20200224160248083"></p><p><span>总之,按照这样的步骤,我们把模型权重给都刷好.</span></p><h4><a name="253-检查效果" class="md-header-anchor"></a><span>2.5.3 检查效果</span></h4><p><span>刷好以后返回</span><code>物体模式</code><span>,选中骨骼,进入</span><code>姿态模式</code><span>,对骨骼进行玩弄,查看效果.你可以点选</span><code>x轴镜像</code><span>来查看左右是否对称.</span></p><p><img src="pics\image-20200224161159980.png" referrerpolicy="no-referrer" alt="image-20200224161159980"></p><p><span>如果出现问题,或者对哪里不满意,那就返回上一步进行修改.</span></p><p><span>至此,我们已经获得了完成绑骨和刷权重的全部内容,绑定骨骼以后,Object会多出来一个</span><code>Armature</code><span>修改器,不要应用它.此外,如果你在</span><code>物体模式</code><span>选中某个object发现它自动进入了</span><code>权重绘制</code><span>,那是因为你之前没有将这个object从</span><code>权重绘制</code><span>模式退出来,不要惊慌,将它切换为</span><code>物体模式</code><span>就好了.</span></p><p><span>绑定骨骼以后,如果你确定之后不会再修改了,建议把所有object都</span><code>Ctrl</code><span>+</span><code>j</code><span>合并(不要把骨骼合并进去),重命名一下.</span></p><p><span>这一步的结果,参见附件里的</span><code>skeleton_2.5.blend</code><span>.</span></p><p><span>关于骨骼和绑骨的详细知识,请在B站搜索</span><code>Blender 绑骨</code><span>,可以找到更多专业而详尽的教程.</span></p><h2><a name="3-用-sb3utility-制作-mod-的3d资源部分" class="md-header-anchor"></a><span>3 用 SB3Utility 制作 MOD 的3d资源部分</span></h2><p><span>我们需要一个</span><code>.fbx</code><span>格式的模型,将它导入</span><code>SB3Utility</code><span>,适当编辑以后,做成MOD.</span></p><h3><a name="31-模型导出前的处理" class="md-header-anchor"></a><span>3.1 模型导出前的处理</span></h3><p><span>把骨骼的小眼睛勾掉,防止对我们造成干扰.</span></p><p><img src="pics\image-20200224164001469.png" alt="image-20200224164001469" style="zoom:33%;" /></p><h4><a name="311-四边面-三角面" class="md-header-anchor"></a><span>3.1.1 四边面-&gt;三角面</span></h4><p><span>游戏中的3d资源一般都是按照三角面的形式来保存的,而建模的时候一般则是四边面建模,所以我们需要把四边面转化为三角面.</span></p><p><code>物体模式</code><span>下,选中object,然后切换到</span><code>编辑模式</code><span>,再</span><code>a</code><span>全选.选择模式切换为</span><code>面</code><span>,然后打开</span><code>面</code><span>这个菜单,选</span><code>面三角化</code><span>.</span></p><p><img src="pics\image-20200224164143918.png" referrerpolicy="no-referrer" alt="image-20200224164143918"></p><p><span>留意右下角的资源统计,面(三角,四边,五边等等)和三角的数量相等了,说明现在所有的面都是三角面.</span></p><p><img src="pics\image-20200224164235249.png" referrerpolicy="no-referrer" alt="image-20200224164235249"></p><h4><a name="312-重算法线" class="md-header-anchor"></a><span>3.1.2 重算法线</span></h4><p><span>在之前的</span><code>Shift</code><span>+</span><code>d</code><span>和x轴向</span><code>-1</code><span>倍拉伸以后,得到的镜像复制品的法线反向可能都指向模型内部了,这样是不行的.</span></p><p><span>法线方向你可以简单理解为一个平面的朝向.illusion在渲染模型的时候会用到法线方向.如果你是发光物体,法线向内就会朝内发光,而外面看来就是黑咕隆咚的,仿佛黑夜里没有窗户的屋子,屋内确实亮堂堂的.法线向外的话,渲染以后在游戏里它就会对外发光.法线方向还会影响材质,反射等等各种表面属性的渲染,所以不容忽视.</span></p><ul><li><p><span>什么是渲染?</span></p><p><span>简单来说就是你把模型的顶点坐标,表面材质之类的参数传给电脑,电脑根据这些数据,计算出要显示在显示屏上的光影效果.</span></p></li><li><p><span>怎么重算法线呢?</span></p><p><code>a</code><span>全选所有的面,然后</span><code>Shift</code><span>+</span><code>n</code><span>就行了.</span></p></li><li><p><span>怎么检验法线方向?</span></p><p><span>选择你要检验的面,坐标系选为</span><code>法向</code><span>,把</span><code>物体Gizmo</code><span>-</span><code>移动</code><span>勾选上.z轴正方向就是法线方向.</span></p></li></ul><p><img src="pics\image-20200224165617863.png" referrerpolicy="no-referrer" alt="image-20200224165617863"></p><p><span>主要检查一下之前</span><code>-1</code><span>倍缩放得到的面的法线方向,如左臂.</span></p><p><span>还有一种检查方法是利用&quot;沿法向挤出&quot;看看挤出的面的方向.请自行上网查阅资料.使用这一方法要注意右下角的资源统计信息,因为即使你右键放弃了挤出,顶点和面还是被复制了,要记得</span><code>x</code><span>删除.否则挤出几次你的内存就爆掉了.</span><code>Shift</code><span>+</span><code>d</code><span>与此类似,也是创建一个副本,即使你不移动,也会在原地有重复顶点,要谨慎使用.</span></p><h4><a name="313-精简模型" class="md-header-anchor"></a><span>3.1.3 精简模型</span></h4><p><span>这个骷髅由一百多骨块构成,骨头曲面逼真复杂,完整模型共有31W顶点,太多了.</span><strong><span>注意,用SB3Utility编辑导入模型的时候,单个模型的顶点数目限制在65534.</span></strong><span>如果模型顶点数量超过了这个限制,可能会有意想不到的导入错误,所以我们需要把模型精简一下.</span></p><p><span>回到</span><code>物体模式</code><span>,坐标轴和物体Gimzo调回去.</span></p><p><span>对选中的</span><code>skeleton</code><span>我们增加一个&quot;精简&quot;修改器:</span></p><p><img src="pics\image-20200224164404706.png" referrerpolicy="no-referrer" alt="image-20200224164404706"></p><p><span>把这个修改器上移到第一个,参数设置如下:</span></p><p><code>对称</code><span>-</span><code>x</code><span>会保证对称性,前提是你的模型自身本来就是左右对称的,包括法线方向也是对称的.</span></p><p><span>注意比率的设置会实时影响模型,所以建议直接输入数字</span><code>0.05</code><span>然后回车.</span></p><p><img src="pics\image-20200224171402913.png" alt="image-20200224171402913" style="zoom: 50%;" /></p><p><span>关注右下角的资源统计,定点数变成了原来的5%左右.看看模型,效果还能接受,我们把这个修改器点了应用.</span></p><p><span>你可以在</span><code>编辑</code><span>模式下看看是不是左右对称:</span></p><p><img src="pics\image-20200224171522813.png" referrerpolicy="no-referrer" alt="image-20200224171522813"></p><h4><a name="314-尺寸修改" class="md-header-anchor"></a><span>3.1.4 尺寸修改</span></h4><p><code>属性</code><span>Tab,</span><code>场景属性</code><span>-</span><code>单位</code><span>-</span><code>单位系统</code><span>-</span><code>公制</code><span>.这时长度单位成了&quot;米&quot;.</span></p><p><img src="pics\image-20200224172407015.png" alt="image-20200224172407015" style="zoom: 50%;" /></p><p><span>由于fbx模型导入i社游戏以后会有5-9倍的放大,所以我们把骨骼和模型的尺寸统一改成真实大小的1/10:</span></p><ol start='' ><li><span>点亮骨骼的小眼睛</span></li><li><code>物体模式</code><span>下,</span><code>a</code><span>全选</span></li><li><span>按一下</span><code>s</code><span>,然后依次按一下</span><code>0</code><span>,</span><code>.</code><span>,</span><code>1</code><span>(数字没有输入框,但是blender可以收到你的输入)</span></li><li><code>Enter</code><span>回车确认</span></li></ol><p><img src="pics\image-20200224172319902.png" referrerpolicy="no-referrer" alt="image-20200224172319902"></p><p><span>保险起见,</span><code>Ctrl</code><span>+</span><code>a</code><span>应用全部变换.</span></p><h4><a name="315-建立uv展开" class="md-header-anchor"></a><span>3.1.5 建立UV展开</span></h4><p><span>什么是UV展开?你可以简单理解为模型表面的展开方式,把立体模型的表面平铺到一个平面,这样我们就可以方便地编辑模型表面的图案了.</span></p><p><span>由于我们是要将外部的3d资源导入游戏内部,如果不给游戏提供一个UV展开方式,那么游戏中这个物体表面的材质和贴图就是乱的.</span></p><p><span>在本教程中,我们没有制作贴图,我们只需要展开一下UV,保存一下,让游戏的渲染器明白模型表面的展开方式就行了.</span></p><p><span>如果没有这一步,在将模型导入游戏以后,你会发现骷髅只有部分表面有材质的表现,其他地方都是黑漆漆的.</span></p><p><span>下面开始操作.</span></p><ol start='' ><li><span>把骨骼的小眼睛勾掉</span></li><li><span>切换到</span><code>UV Editing</code><span>,</span><code>编辑模式</code><span>,</span><code>a</code><span>全选,选择模式切换到</span><code>面</code></li><li><code>右键</code><span>-</span><code>UV展开面</code><span>-</span><code>智能UV投射</code><span>,在弹出的窗口点</span><code>确定</code></li></ol><p><img src="pics\image-20200224173742003.png" referrerpolicy="no-referrer" alt="image-20200224173742003"></p><ol start='4' ><li><span>左边的</span><code>Tab</code><span>里,选择</span><code>图像绘制</code><span>,就可以看到UV展开的样子.</span></li></ol><p><img src="pics\image-20200224174106708.png" referrerpolicy="no-referrer" alt="image-20200224174106708"></p><p><code>Ctrl</code><span>+</span><code>s</code><span>保存一下,此时模型已经有了UV展开方式的信息.我们换回</span><code>Default</code><span>排版.</span></p><p><span>至此,模型编辑的结果保存在</span><code>skeleton_3.1.blend</code><span>.</span></p><h3><a name="32-导出fbx模型" class="md-header-anchor"></a><span>3.2 导出.fbx模型</span></h3><p><span>在导出模型前,可以再次检查一下顶点数量,法线方向,绑骨效果,UV是否展开.</span></p><p><span>因为我们没有贴图,且模型的材质可以在SB3Utility里面设置,所以在这里就不用麻烦了.</span></p><p><span>选中骨架模型和骨骼以后:</span></p><p><img src="pics\image-20200224174808753.png" referrerpolicy="no-referrer" alt="image-20200224174808753"></p><p><span>导出的参数设置(变换部分用默认设置就可以):</span></p><p><img src="pics\image-20200224175106392.png" referrerpolicy="no-referrer" alt="image-20200224175106392"></p><p><span>点击</span><code>导出FBX</code><span>,此后我们可以告别Blender了.</span></p><p><span>参见附件里的</span><code>skeleton.fbx</code><span>.</span></p><h3><a name="33-将fbx导入sb3utility" class="md-header-anchor"></a><span>3.3 将.fbx导入SB3Utility</span></h3><p><span>打开SB3Utility</span></p><p><img src="pics\image-20200224175410516.png" referrerpolicy="no-referrer" alt="image-20200224175410516"></p><p><span>把</span><code>skeleton.fbx</code><span>拖放进去.</span></p><p><img src="pics\image-20200224175534540.png" referrerpolicy="no-referrer" alt="image-20200224175534540"></p><h3><a name="34-新建一个空的unity3d文件" class="md-header-anchor"></a><span>3.4 新建一个空的</span><code>.unity3d</code><span>文件</span></h3><p><span>首先建立这样一个文件夹</span><code>[Author] ModName/abdata/studio/info</code><span>.比如教程案例是</span><code>[Eirrac] Simple_Skeleton/abdata/studio/info</code><span>.</span></p><p><span>我们在游戏路径</span><code>*/AI-Syoujyo\abdata\studio\info</code><span>下把</span><code>09.unity3d</code><span>复制粘贴到</span><code>[Eirrac] Simple_Skeleton/abdata/studio</code><span>下.注意不是粘贴到</span><code>/info</code><span>里面,重命名为</span><code>skeleton.unity3d</code><span>.</span></p><p><span>把</span><code>skeleton.unity3d</code><span>拖放到SB3Utility里面.</span></p><p><span>选中左边</span><code>MonoB. &amp; Other</code><span>里面的</span><code>studio/info/09.unity3d</code><span>,按</span><code>F2</code><span>重命名为</span><code>studio/skeleton.unity3d</code><span>,</span><code>OK</code><span>确定.</span></p><p><img src="pics\image-20200224183900166.png" referrerpolicy="no-referrer" alt="image-20200224183900166"></p><p><span>其他的都删掉.</span></p><p><img src="pics\image-20200224183940617.png" referrerpolicy="no-referrer" alt="image-20200224183940617"></p><p><code>File</code><span>-</span><code>CABinet(s)</code><span>,修改我下面选中的数值.如果不知道这个数字是什么,百度一下&quot;GUID&quot;,它就类似于一个名字,但是不能重复.这里提供一个在线随机生成GUID的网址</span><a href='https://www.guidgen.com/' target='_blank' class='url'>https://www.guidgen.com/</a><span>,复制粘贴以后记得把数字之间的</span><code>-</code><span>去掉.改好以后回车.</span></p><p><code>Ctrl</code><span>+</span><code>s</code><span>保存.至此,我们得到一个空白的</span><code>.unity3d</code><span>文件.</span></p><p><img src="pics\image-20200224184109166.png" referrerpolicy="no-referrer" alt="image-20200224184109166"></p><h3><a name="35-从游戏本体中复制一些资源" class="md-header-anchor"></a><span>3.5 从游戏本体中复制一些资源</span></h3><p><span>我们需要复制一个studio的FK物品进来,然后用skeleton模型替换掉物品的模型,更换它的材质和贴图,设置一些调色之类的参数.</span></p><p><span>我们还是将</span><code>*\AI-Syoujyo\abdata\studio\info\09.unity3d</code><span>这个&quot;list&quot;文件拖放到SB3Utility,可以看到左边的文件列表里有</span><code>ItemBoneList_13_45</code><span>和</span><code>ItemBoneList_13_46</code><span>这两项,这就是FK物品的骨骼列表,说明在AI少女Studio里面,FK物品的Group是</span><code>13</code><span>,有两个Category:</span><code>45通常</code><span>和</span><code>46H</code><span>.如果还是不明白左边这些文件都是干啥的,你可以一一打开看看.</span></p><p><img src="pics\image-20200225114415253.png" referrerpolicy="no-referrer" alt="image-20200225114415253"></p><p><span>我们要找一个FK物品,所以打开</span><code>ItemList_13_45</code><span>或者</span><code>ItemList_13_46</code><span>,找到一个FK物品的资源文件的路径和模型的名称.</span></p><p><img src="pics\image-20200225114514174.png" referrerpolicy="no-referrer" alt="image-20200225114514174"></p><p><span>如上,</span><code>管理番号</code><span>就是日文的&quot;物品序号&quot;的意思,这个序号的适用范围是Studio,也就是说,</span><code>FK触手1</code><span>和</span><code>FK触手2</code><span>是Studio中编号</span><code>1405</code><span>和编号</span><code>1406</code><span>的物品.它们属于物品的</span><code>13FK道具</code><span>-</span><code>46H</code><span>.模型在文件</span><code>*\AI-Syoujyo\abdata\studio\09.unity3d</code><span>里面,文件里面的模型名是</span><code>p_ai_stu_syokusyu00_00</code><span>和</span><code>p_ai_stu_syokusyu01_00</code><span>.在Studio里面的位置如下:</span></p><p><img src="pics\image-20200225114833517.png" referrerpolicy="no-referrer" alt="image-20200225114833517"></p><p><span>找到想要的文件名以后,我们关闭这个</span><code>\studio\info\09.unity3d</code><span>,将</span><code>*\AI-Syoujyo\abdata\studio\09.unity3d</code><span>这个文件拖放到SB3Utility,找到</span><code>p_ai_stu_syokusyu00_00</code><span>,打开它的模型预览</span><code>SkinnedMeshRenderer</code><span>,如下:</span></p><p><img src="pics\image-20200225115456437.png" referrerpolicy="no-referrer" alt="image-20200225115456437"></p><p><span>说明一下文件结构.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="powershell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="powershell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">p_ai_stu_syokusyu00_00</span> <span class="cm-comment"># 模型的名字</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">Animator</span> <span class="cm-comment"># 可能是做动画用的,这个我也不知道怎么用</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">MonoBehaviour</span> <span class="cm-punctuation">[</span><span class="cm-identifier">ItemComponet</span><span class="cm-punctuation">]</span> <span class="cm-identifier">PathID</span><span class="cm-operator">=....</span> <span class="cm-comment"># 物体的一些属性设置,主要是渲染器的设置</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">n_syokusyu</span> <span class="cm-comment"># FK骨骼</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-identifier">o_S_kokan</span> <span class="cm-comment"># 模型的三角面</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">Materials</span> <span class="cm-comment"># 材质</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-identifier">Textures</span> <span class="cm-comment"># 贴图</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 184px;"></div><div class="CodeMirror-gutters" style="display: none; height: 184px;"></div></div></div></pre><p><span>把</span><code>p_ai_stu_syokusyu00_00</code><span>mark一下(</span><code>Assets</code><span>-</span><code>Mark/Unmark for Copying</code><span>),表示我要复制这个物品到其他</span><code>.unity3d</code><span>文件,mark以后文件名会出现一个下划线:</span></p><p><img src="pics\image-20200225120128428.png" referrerpolicy="no-referrer" alt="image-20200225120128428"></p><p><span>转到我们的&quot;空文件&quot;</span><code>skeleton.unity3d</code><span>:</span></p><p><img src="pics\image-20200225120246613.png" referrerpolicy="no-referrer" alt="image-20200225120246613"></p><p><span>然后粘贴</span><code>Assets</code><span>-</span><code>Paste All Marked</code><span>:</span></p><p><img src="pics\image-20200225120421717.png" referrerpolicy="no-referrer" alt="image-20200225120421717"></p><p><span>点</span><code>Paste</code><span>,然后关掉</span><code>09.unity3d</code><span>.</span></p><p><img src="pics\image-20200225120513902.png" referrerpolicy="no-referrer" alt="image-20200225120513902"></p><h3><a name="36-面板介绍" class="md-header-anchor"></a><span>3.6 面板介绍</span></h3><p><img src="pics\批注 2020-02-25 153922.png" referrerpolicy="no-referrer"></p><p><span>以上是对界面的简单翻译,希望你对这个界面不要过于恐惧,对于不能理解的名称,可以百度也可以不去管它,只要跟着我的步骤来就可以.</span></p><h3><a name="37-模型编辑" class="md-header-anchor"></a><span>3.7 模型编辑</span></h3><ul><li><span>把模型重命名,改为</span><code>Skeleton_Binded</code><span>,意为绑好的骨架.</span></li><li><span>将子网格信息的材质都选为</span><code>(none)</code></li></ul><p><img src="pics\image-20200225155839727.png" referrerpolicy="no-referrer" alt="image-20200225155839727"></p><p><span>把中间的窗口关闭,</span><code>Ctrl</code><span>+</span><code>s</code><span>保存,这时左侧</span><code>skeleton.unity3d*</code><span>的</span><code>*</code><span>就不见了.</span></p><p><span>双击</span><code>Skeleton_Binded</code><span>重新打开,这时看到</span><code>Object Tree</code><span>里的</span><code>Materials</code><span>和</span><code>Textures</code><span>都是空的,这是因为之前我们材质都选了空,而材质需要用到的贴图也就不再被使用.</span></p><p><img src="pics\image-20200225160409732.png" referrerpolicy="no-referrer" alt="image-20200225160409732"></p><p><span>选中</span><code>n_syokusyu</code><span>,在右边</span><code>Frame</code><span>里点</span><code>Remove</code><span>删掉这个骨骼框架.</span></p><p><img src="pics\image-20200225160849564.png" referrerpolicy="no-referrer" alt="image-20200225160849564"></p><p><span>把网格</span><code>o_S_kokan</code><span>也删掉.</span></p><p><img src="pics\image-20200225160932975.png" referrerpolicy="no-referrer" alt="image-20200225160932975"></p><p><span>打开左侧</span><code>skeleton.fbx</code><span>,拖拽</span><code>armature</code><span>到</span><code>Object Tree</code><span>的</span><code>Skeleton_Binded</code><span>上松开,在弹出的窗口点</span><code>OK</code><span>.</span></p><p><img src="pics\image-20200225161528683.png" referrerpolicy="no-referrer" alt="image-20200225161528683"></p><p><span>同理,拖拽</span><code>skeleton</code><span>到</span><code>Skeleton_Binded</code><span>上松开,勾选</span><code>Create Mesh Transform</code><span>,然后点</span><code>OK</code><span>.</span></p><p><img src="pics\image-20200225161638462.png" referrerpolicy="no-referrer" alt="image-20200225161638462"></p><p><span>选中</span><code>Object Tree</code><span>-</span><code>skeleton</code><span>-</span><code>SkinnedMeshRenderer</code><span>,右边出现了网格模型和骨骼.</span></p><p><img src="pics\image-20200225162013879.png" referrerpolicy="no-referrer" alt="image-20200225162013879"></p><p><span>点击</span><code>Align Mesh</code><span>将网格模型和骨骼对齐.</span></p><p><img src="pics\image-20200225162103797.png" referrerpolicy="no-referrer" alt="image-20200225162103797"></p><p><span>打开左侧</span><code>skeleton.unity3d</code><span>的</span><code>Materials</code><span>标签,重命名其中一个材质为</span><code>Skeleton_Body</code><span>.</span></p><p><span>双击</span><code>Skeleton_Body</code><span>,这时</span><code>Object_Tree</code><span>的</span><code>Meterials</code><span>和</span><code>Texture</code><span>再次有了内容,</span><code>Meterials</code><span>下有两个材质,一个是我们没有重命名的,一个是</span><code>Skeleton_Body</code><span>.选中不需要的那个材质,在右侧滑到底,选</span><code>Remove</code><span>删掉.</span></p><p><span>(我删除以后发现没有办法撤回了,为了演示</span><code>Remove</code><span>的位置,在下面的截图里显示我选中的是</span><code>Skeleton_Body</code><span>,但实际上删除的应该是另一个!!!)</span></p><p><img src="pics\image-20200225162818824.png" referrerpolicy="no-referrer" alt="image-20200225162818824"></p><p><span>选中</span><code>Skeleton_Body</code><span>,在右边把所有的贴图都选为</span><code>(none)</code><span>,记得用滚轮把表格下滑到底.</span></p><p><img src="pics\image-20200225163019016.png" referrerpolicy="no-referrer" alt="image-20200225163019016"></p><p><span>选中</span><code>SkinnedMeshRenderer</code><span>,将子网格的材质都选为</span><code>Skeleton_Body</code><span>.你的数字可能和</span><code>216</code><span>不一样,这是它自己根据路径计算的,不用管.</span></p><p><img src="pics\image-20200225163254777.png" referrerpolicy="no-referrer" alt="image-20200225163254777"></p><p><span>双击绿色的</span><code>MonoBehaviour [ItemComponent]</code><span>,我们要对它进行编辑,如下:</span></p><p><img src="pics\image-20200225163456577.png" referrerpolicy="no-referrer" alt="image-20200225163456577"></p><p><span>返回</span><code>Skeleton_Binded</code><span>标签,将</span><code>Object_Tree</code><span>的</span><code>SkinnedMeshRenderer</code><span>拖拽停在</span><code>Skeleton_Binded [ItemComponent]</code><span>标签标题上(不要松开鼠标左键),你会发现悬停一小会儿以后这个标签就打开了,继续拖拽,放在</span><code>renderer (PPtr&lt;$Renderer&gt;):</code><span>上面.</span></p><p><img src="pics\GIF 2020-2-25 16-39-18.gif" style="zoom:50%;" /></p><p><span>更改过的值就会用绿色高亮显示.</span><code>PathID</code><span>是自动计算的,每次的值可能都不一样,不用管.</span></p><p><span>删掉一个</span><code>MaterialInfo</code><span>,因为我们只用一种材质.</span></p><p><img src="pics\GIF 2020-2-25 16-45-44.gif" style="zoom:50%;" /></p><p><span>修改其他信息,我只修改了下图绿色高亮的参数.</span></p><p><img src="pics\image-20200225165130209.png" alt="image-20200225165130209" style="zoom:50%;" /></p><p><span>关于</span><code>MonoBehaviour</code><span>的一些说明,参见另一个文档</span><code>SB3Utility材质设置</code><span>.</span></p><p><span>改完以后关闭</span><code>Skeleton_Binded [ItemComponent]</code><span>和</span><code>Skeleton_Binded</code><span>,</span><code>Ctrl</code><span>+</span><code>s</code><span>保存.</span></p><p><img src="pics\image-20200225165959432.png" referrerpolicy="no-referrer" alt="image-20200225165959432"></p><p><span>重新打开</span><code>Skeleton_Binded</code><span>,材质和贴图看起来就清爽多了.</span></p><p><img src="pics\image-20200225170023550.png" referrerpolicy="no-referrer" alt="image-20200225170023550"></p><h2><a name="4-list文件的编辑" class="md-header-anchor"></a><span>4 list文件的编辑</span></h2><p><span>不要关闭</span><code>SB3Utility</code><span>,在</span><code>[Eirrac] Simple_Skeleton\abdata\studio\info\Eirrac</code><span>文件夹里新建下面几个文件(可以新建空白文档,然后重命名):</span></p><ul><li><span>ItemBoneList_Group_Category.csv</span></li><li><span>ItemCategory_Category_Group.csv</span></li><li><span>ItemGroup_Group/GroupName.csv</span></li><li><span>ItemList_ListID_Group_Category.csv</span></li></ul><p><span>其中</span><code>Group</code><span>,</span><code>Category</code><span>由你自己定义,比如我的</span><code>Group</code><span>是1218,</span><code>Category</code><span>是01.</span><code>Group</code><span>尽量大一点以免和游戏原来的Group冲突,但也不要太大以免超过最大限度(貌似7000还是可以的).</span><code>Category</code><span>作为你的Group里面的小种类,序号自己定义即可.</span></p><p><span>这几个文件的编写可以在附件里找我的案例,建议用Excel编辑.格式建议自己打开一个AI少女Studio相应的list,和官方的格式保持一致.</span></p><p><span>下面的说明里,空白部分都是tab,不是空格.</span></p><h3><a name="41-itemgroupeirraccsv" class="md-header-anchor"></a><span>4.1 ItemGroup_Eirrac.csv</span></h3><p><span>Group1218在游戏的名称显示</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">グループ番号<span class="cm-tab" role="presentation" cm-text="	">  </span>名称</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">1218<span class="cm-tab" role="presentation" cm-text="	">    </span>Eirrac</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 53px;"></div><div class="CodeMirror-gutters" style="display: none; height: 53px;"></div></div></div></pre><h3><a name="42-itemcategory011218csv" class="md-header-anchor"></a><span>4.2 ItemCategory_01_1218.csv</span></h3><p><span>Group下,子种类的名称显示</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">カテゴリー番号<span class="cm-tab" role="presentation" cm-text="	"> </span>名称</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">1<span class="cm-tab" role="presentation" cm-text="	">   </span>FK</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 53px;"></div><div class="CodeMirror-gutters" style="display: none; height: 53px;"></div></div></div></pre><h3><a name="43-itemlist01121801csv" class="md-header-anchor"></a><span>4.3 ItemList_01_1218_01.csv</span></h3><p><span>这是我的Group1218-Category01下第01个ItemList文件.如果以后我在这个种类里有有新的mod,那么文件名就会是</span><code>ItemList_02_1218_01.csv</code><span>.</span></p><p><code>管理番号</code><span>就是物品在Studio里面的序号,因为SideLoader插件会自动为zipmod格式的mod物品建立新的序号,所以只要你自己的mod里面这些序号不要互相冲突就可以了.</span></p><p><code>名称</code><span>就是在游戏里,对应选项所显示的名字.</span></p><p><span>然后就是资源文件的路径和模型的名字.</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">管理番号<span class="cm-tab" role="presentation" cm-text="	">    </span>大きい項目<span class="cm-tab" role="presentation" cm-text="	">   </span>中間項目<span class="cm-tab" role="presentation" cm-text="	">    </span>名称<span class="cm-tab" role="presentation" cm-text="	">  </span>マニフェスト<span class="cm-tab" role="presentation" cm-text="	">  </span>バンドルパス<span class="cm-tab" role="presentation" cm-text="	">  </span>ファイルパス<span class="cm-tab" role="presentation" cm-text="	">  </span>子の接続先</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;">2<span class="cm-tab" role="presentation" cm-text="	">   </span>1218<span class="cm-tab" role="presentation" cm-text="	">    </span>1<span class="cm-tab" role="presentation" cm-text="	">   </span>Simple_Skeleton<span class="cm-tab" role="presentation" cm-text="	"> </span><span class="cm-tab" role="presentation" cm-text="	">    </span>studio/skeleton.unity3d<span class="cm-tab" role="presentation" cm-text="	"> </span>Skeleton_Binded<span class="cm-tab" role="presentation" cm-text="	"> </span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 53px;"></div><div class="CodeMirror-gutters" style="display: none; height: 53px;"></div></div></div></pre><h3><a name="44-itembonelist121801csv" class="md-header-anchor"></a><span>4.4 ItemBoneList_1218_01.csv</span></h3><p><span>骨骼列表.这里的骨骼填的是</span><code>SkinnedMeshRenderer</code><span>下面的骨骼,如果有些情况下</span><code>armature</code><span>里有的骨骼没有在</span><code>SkinnedMeshRenderer</code><span>里绑定,还是只需要填</span><code>SkinnedMeshRenderer</code><span>里出现的骨骼就行.</span></p><p><span>骨骼数量多,填写方法参照附件.</span></p><h2><a name="5-mod压缩打包" class="md-header-anchor"></a><span>5 MOD压缩打包</span></h2><p><span>在</span><code>[Eirrac] Simple_Skeleton</code><span>文件夹里,新建一个空白文档,填写如下内容(最好都用英文填写):</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">manifest</span> <span class="cm-attribute">schema-ver</span>=<span class="cm-string">"1"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">guid</span><span class="cm-tag cm-bracket">&gt;</span>Eirrac.Studio.Simple_Skeleton<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">guid</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">name</span><span class="cm-tag cm-bracket">&gt;</span>Simple Skeleton<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">name</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">version</span><span class="cm-tag cm-bracket">&gt;</span>1.0.0<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">version</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">author</span><span class="cm-tag cm-bracket">&gt;</span>Eirrac<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">author</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">description</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>This is a FK human skeleton in AI Girl Studio with color changing and Emission.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span>You can find it as Items/Eirrac/FK/Simple Skeleton in AI Studio.</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">description</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">website</span><span class="cm-tag cm-bracket">&gt;</span>zodgame.xyz<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">website</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">game</span><span class="cm-tag cm-bracket">&gt;</span>AI Girl<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">game</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">manifest</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 318px;"></div><div class="CodeMirror-gutters" style="display: none; height: 318px;"></div></div></div></pre><p><span>其中,</span><code>&lt;guid&gt;</code><span>这一行是必须有的,官方推荐格式为</span><code>com.Author.Mod name</code><span>,我这里的格式和推荐的不一样,无伤大雅,只要保证你的这个内容不会和其他任何人重复就行(带有相同guid的不同mod同时加载会出错),它是用来计算你的mod的guid的(记得之前我们改过skeleton.unity3d的CAB吗,其实可以不改,但是为了安全起见,改了更为保险).</span></p><p><span>其他的</span><code>&lt;name&gt;&lt;version&gt;&lt;author&gt;&lt;description&gt;&lt;website&gt;&lt;game&gt;</code><span>都是可有可无.比如你也可以这么填:</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="html"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="html"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">manifest</span> <span class="cm-attribute">schema-ver</span>=<span class="cm-string">"1"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">guid</span><span class="cm-tag cm-bracket">&gt;</span>Eirrac.Studio.Simple_Skeleton<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">guid</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">name</span><span class="cm-tag cm-bracket">&gt;&lt;/</span><span class="cm-tag">name</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">manifest</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 105px;"></div><div class="CodeMirror-gutters" style="display: none; height: 105px;"></div></div></div></pre><p><span>改好以后,保存并关闭,把文件名改为</span><code>manifest.xml</code><span>.</span></p><p><span>现在你的zipmod已经接近完成了,文件结构如下(在1.3任务明确里面已经讲过,为了你读起来方便,我在下面复制了一遍):</span></p><pre spellcheck="false" class="md-fences md-end-block ty-contain-cm modeLoaded" lang="python"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[<span class="cm-variable">Author</span>] <span class="cm-variable">mod</span> <span class="cm-variable">name</span> <span class="cm-comment"># 文件夹</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">abdata</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">studio</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  <span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">GroupName</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">mod_name</span>.<span class="cm-property">unity3d</span> <span class="cm-comment"># 3d资源文件</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">info</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">GroupName</span> <span class="cm-comment"># 文件夹</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ItemBoneList_Group_Category</span>.<span class="cm-property">csv</span> <span class="cm-comment"># 物品的骨骼列表</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ItemCategory_Category_Group</span>.<span class="cm-property">csv</span> <span class="cm-comment"># 物品的子类别</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ItemGroup_GroupName</span>.<span class="cm-property">csv</span> <span class="cm-comment"># 物品的组别</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ItemList_ListID_Group_Category</span>.<span class="cm-property">csv</span> <span class="cm-comment"># 物品清单</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">manifest</span>.<span class="cm-property">xml</span> <span class="cm-comment"># 用于制作manifest</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 312px;"></div><div class="CodeMirror-gutters" style="display: none; height: 312px;"></div></div></div></pre><p><span>将</span><code>abdata</code><span>和</span><code>manifest.xml</code><span>打包,</span><strong><span>压缩方式选择为</span><code>储存</code></strong><span>(我用的是2345好压).</span></p><p><img src="pics\image-20200225175543569.png" alt="image-20200225175543569" style="zoom:50%;" /></p><p><img src="pics\image-20200225175639206.png" alt="image-20200225175639206" style="zoom:33%;" /></p><p><span>将扩展名改为</span><code>.zipmod</code><span>防止不懂mod的人解压出来.</span></p><p><img src="pics\image-20200225175805855.png" referrerpolicy="no-referrer" alt="image-20200225175805855"></p><p><span>你制作的mod就是</span><code>[Eirrac] Simple_Skeleton.zipmod</code><span>.</span></p><h2><a name="6-测试" class="md-header-anchor"></a><span>6 测试</span></h2><p><span>把</span><code>[Eirrac] Simple_Skeleton.zipmod</code><span>复制粘贴到</span><code>*\AI-Syoujyo\mods</code><span>里,打开Studio,如下:</span></p><p><img src="pics\image-20200225183148635.png" referrerpolicy="no-referrer" alt="image-20200225183148635"></p><p><span>可以摆pose,可以调颜色,可以调发光色.</span></p><h2><a name="7-一些好用的资源网站" class="md-header-anchor"></a><span>7 一些好用的资源网站</span></h2><ul><li><p><a href='https://www.deviantart.com/'><span>D站</span></a></p><p><span>(不是嘀哩嘀哩那个d站)需要翻墙,有丰富的模型,材质和贴图,是MMD制作者的宝库,不过我还没有怎么用过.</span></p></li><li><p><a href='https://d20sxl95pp686h.cloudfront.net/ai-syoujyo-intro.html'><span>游戏结构及插件体系介绍</span></a></p><p><span>论坛大佬的良心整理,关于游戏的绝大部分资源和说明都可以在这里找到.</span></p></li><li><p><a href='https://www.blender-3d.cn/'><span>Blender 3D模型库</span></a></p><p><span>每天一次免费下载,.blender格式的模型库.</span></p></li><li><p><a href='https://www.mixamo.com/#/'><span>Mixamo</span></a></p><p><span>Adobe旗下的自动绑骨和动作库,免费注册Adobe账号以后就可以使用这个网站.上传你的模型,网站进行自动绑骨,你可以下载绑骨好的模型,还能下载各种动作.</span></p></li><li><p><a href='https://www.guidgen.com/' target='_blank' class='url'>https://www.guidgen.com/</a></p><p><span>免费随机生成GUID的网址.</span></p></li><li><p><a href='https://github.com/IllusionMods/BepisPlugins/wiki/1-Introduction-to-zipmod-format'><span>Introduction to zipmod format</span></a></p><p><span>zipmod的官方说明文档,全英文,需要一些英语水平.</span></p></li></ul><h2><a name="inf-后序" class="md-header-anchor"></a><span>inf 后序</span></h2><p><span>这个教程我一共花了将近一周的时间来写,因为想要写得尽量通俗易懂又详细明了,所以篇幅可以说是远远超出了自己的预期.光文字就有1W+,图片更是一个步骤一张图,希望对读者能够真正地有所帮助.</span></p><p><span>尽管我已经尽力了,但是终究个人能力有限,教程里难免有些疏漏之处,也难免有些地方写得不够明白.如果你发现哪里不明白,或者教程内容的某个部分有错误,或者在制作mod的过程中遇到了什么问题,都欢迎与我联系.</span></p><p><span>我是zodgame.xyz论坛的Eirrac,你可以叫我大E.欢迎来论坛找我,或者给我发邮件</span><a href='mailto:eirracrain@outlook.com' target='_blank' class='url'>eirracrain@outlook.com</a></p><p><span>以上.</span></p><p>&nbsp;</p></div>
+</body>
+</html>
