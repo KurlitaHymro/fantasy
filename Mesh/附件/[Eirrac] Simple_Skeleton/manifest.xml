@@ -1,0 +1,12 @@
+<manifest schema-ver="1">
+	<guid>Eirrac.Studio.Simple_Skeleton</guid>
+	<name>Simple Skeleton</name>
+	<version>1.0.0</version>
+	<author>Eirrac</author>
+	<description>
+		This is a FK human skeleton in AI Girl Studio with color changing and Emission.
+		You can find it as Items/Eirrac/FK/Simple Skeleton in AI Studio.
+	</description>
+	<website>zodgame.xyz</website>
+	<game>AI Girl</game>
+</manifest>
